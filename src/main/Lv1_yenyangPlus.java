@@ -1,3 +1,5 @@
+package main;
+
 public class Lv1_yenyangPlus {
     static class Solution {
         public float ret_num(int num, boolean bool){

@@ -1,3 +1,5 @@
+package main;
+
 public class Lv1_three_mstier_problem_brutal {
     class Solution {
         public String ret_star(String li){
