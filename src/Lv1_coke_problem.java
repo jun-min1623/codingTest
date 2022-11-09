@@ -1,6 +1,6 @@
 public class Lv1_coke_problem {
     public static int ret_market(int coke, int divide, int ret_num,int sums,int drinked){
-        // coke 를 마시는 과정
+        // coke 를 마시는 과정!!!!
         if(coke>0){
             drinked += coke;
             sums += coke;
