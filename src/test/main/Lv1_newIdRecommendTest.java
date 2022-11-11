@@ -31,8 +31,8 @@ public class Lv1_newIdRecommendTest {
     @Test
     public void solution4() {
         Solution solution = new Solution();
-        String str2 = ".ab......................c.";
-        assertEquals(solution.solution(str2), "ab.c");
+        String str2 = "........................";
+        assertEquals(solution.solution(str2), "aaa");
     } @Test
     public void solution5() {
         Solution solution = new Solution();
