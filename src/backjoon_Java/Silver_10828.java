@@ -3,6 +3,7 @@ package backjoon_Java;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 /*
 * 명령은 총 다섯 가지이다.
@@ -19,8 +20,8 @@ top: 스택의 가장 위에 있는 정수를 출력한다. 만약 스택에 들
 *
 * */
 public class Silver_10828 {
-    public static class Main {
-        class stack {
+    public class Main {
+        public static class stack {
             int top;
             int size;
             int[] stack;
@@ -45,14 +46,14 @@ public class Silver_10828 {
                 top--;
             }
             public boolean isEmpty() {
-                if (stack.length == 0) {
+                if (top == -1) {
                     return true;
                 }
                 return false;
             }
 
-            public int getSize() {
-                return size;
+            public void getSize() {
+                System.out.println(top+1);
             }
 
             public void top() {
@@ -66,18 +67,18 @@ public class Silver_10828 {
 
         public static BufferedReader br;
 
-        public void main(String[] args) throws IOException {
+        public static void main(String[] args) throws IOException {
             solution();
         }
 
-        public void solution() throws IOException {
+        public static void solution() throws IOException {
             br = new BufferedReader(new InputStreamReader(System.in));
             // 명령의 수 입력받음
             int n = Integer.parseInt(br.readLine());
-            stack stack = new stack(10000);
-            while (n > 0) {
-                execute(stack, br.readLine());
-                n--;
+            stack stack = new stack(n);
+            for (int i=0;i<n;i++){
+                String str = br.readLine();
+                execute(stack, str);
             }
         }
 
